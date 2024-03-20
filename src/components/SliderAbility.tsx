@@ -1,8 +1,8 @@
 import {useState} from "react";
-import time from '../../../fintech/public/images/Frame211.png'
-import fintech from '../../../fintech/public/images/Frame214.svg'
-import search from '../../../fintech/public/images/searchMini.svg'
-import done from '../../../fintech/public/images/done.svg'
+import time from '../../public/images/Frame211.png'
+import fintech from '../../public/images/Frame214.svg'
+import search from '../../public/images/searchMini.svg'
+import done from '../../public/images/done.svg'
 
 const SliderAbility = () => {
 

@@ -1,4 +1,4 @@
-import logo from '../../../fintech/public/images/Logo.svg'
+import logo from '../../public/images/Logo.svg'
 
 const Header = () => {
     return (
