@@ -2,53 +2,37 @@ import {useState} from "react";
 import goals1 from '../../public/images/goals1.png'
 import goals2 from '../../public/images/goals2.png'
 import goals3 from '../../public/images/goals3.png'
+import star from '../../public/images/star.svg'
+import light from '../../public/images/lightning.svg'
+import rocket from '../../public/images/rocket.svg'
 import StarSvg from "./svg/StarSvg";
+import {ThemeType} from "./DesktopHeader";
 
 
-const SliderGoals = () => {
+const SliderGoals = ({theme}:ThemeType) => {
 
     const initialData = [
         {
             id: 1,
-            block:  <div className="w-[300px] h-[332px] bg-neutral-100 rounded-[30px] flex-col justify-start items-start inline-flex">
-                <div className="self-stretch grow shrink basis-0 p-4 flex-col justify-start items-center gap-4 flex">
-                    <div className="self-stretch justify-start items-center gap-4 inline-flex">
-                        <div className="w-6 h-6 px-0.5 pt-0.5 pb-[2.88px] justify-center items-center flex" ><StarSvg/></div>
-                        <div className="grow shrink basis-0 text-rose-600 text-2xl font-medium font-['Raleway'] leading-9">Качество</div>
-                    </div>
-                    <div className="self-stretch text-zinc-900 text-sm font-medium font-['Raleway'] leading-snug">
-                        Высокое качество сопровождения и взаимодействия с проектами и их подразделениями</div>
-                </div>
-                <img className="self-stretch h-40 p-4 rounded-[30px]" src={goals1} />
-            </div>
-
+            title:'Качество',
+            svg: star,
+            description:'Высокое качество сопровождения и взаимодействия с проектами и их подразделениями',
+            img:goals1,
         },
         {
             id: 2,
-            block:  <div className="w-[300px] h-[332px] bg-neutral-100 rounded-[30px] flex-col justify-start items-start inline-flex">
-                <div className="self-stretch grow shrink basis-0 p-4 flex-col justify-start items-center gap-4 flex">
-                    <div className="self-stretch justify-start items-center gap-4 inline-flex">
-                        <div className="w-6 h-6 px-[5.45px] py-[1.31px] justify-center items-center flex" />
-                        <div className="grow shrink basis-0 text-rose-600 text-2xl font-medium font-['Raleway'] leading-9">Риски</div>
-                    </div>
-                    <div className="self-stretch text-zinc-900 text-sm font-medium font-['Raleway'] leading-snug">Минимизация всех видов рисков проектов</div>
-                </div>
-                <img className="self-stretch h-40 p-4 rounded-[30px]" src={goals2} />
-            </div>
+            title:'Риски',
+            svg: light,
+            description:'Минимизация всех видов рисков проектов',
+            img:goals2,
 
         },
         {
             id: 3,
-            block:  <div className="w-[300px] h-[332px] bg-neutral-100 rounded-[30px] flex-col justify-between items-start inline-flex">
-                <div className="self-stretch h-[172px] p-4 flex-col justify-start items-center gap-4 flex">
-                    <div className="self-stretch justify-start items-center gap-4 inline-flex">
-                        <div className="w-6 h-6 px-[3.25px] pt-[2.16px] pb-[2.25px] justify-center items-center flex" />
-                        <div className="grow shrink basis-0 text-rose-600 text-2xl font-medium font-['Raleway'] leading-9">Развитие</div>
-                    </div>
-                    <div className="self-stretch text-zinc-900 text-sm font-medium font-['Raleway'] leading-snug">Развитие компетенций в профессиональных направлениях и рост экспертизы УК в В2В и В2С  сферах</div>
-                </div>
-                <img className="self-stretch h-40 p-4 rounded-[30px]" src={goals3} />
-            </div>
+            title:'Развитие',
+            svg: rocket,
+            description:'Развитие компетенций в профессиональных направлениях и рост экспертизы УК в В2В и В2С сферах',
+            img:goals3,
 
         },
     ]
@@ -85,10 +69,18 @@ const SliderGoals = () => {
                     {cards.map(c => (
                         <div onTouchStart={() => touchStart(c.id)} onTouchEnd={() => touchEnd(c.id)}
                              className="w-[300px]  h-[332px]   flex-col justify-between items-start ml-2 inline-flex">
-
-                            <div>
-                                {c.block}
-                            </div>
+                                <div className="w-[300px] h-[332px] rounded-[30px] flex-col justify-start items-start inline-flex"  style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
+                                    <div className="self-stretch grow shrink basis-0 p-4 flex-col justify-start items-center gap-4 flex">
+                                        <div className="self-stretch justify-start items-center gap-4 inline-flex">
+                                            <div className="w-6 h-6 px-0.5 pt-0.5 pb-[2.88px] justify-center items-center flex" >
+                                                <img src={c.svg}/></div>
+                                            <div className="grow shrink basis-0 text-rose-600 text-2xl font-medium font-['Raleway'] leading-9" >{c.title}</div>
+                                        </div>
+                                        <div className="self-stretch text-zinc-900 text-sm font-medium font-['Raleway'] leading-snug" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
+                                            {c.description}</div>
+                                    </div>
+                                    <img className="self-stretch h-40 p-4 rounded-[30px]" src={c.img} />
+                                </div>
                         </div>
                     ))}
                 </div>

@@ -129,7 +129,10 @@ export default {
             colors: {
                 light_blue: "#44699F",
                 dark_blue: "#0E2146",
-                bg: "#D9E6F9"
+                bg: "#D9E6F9",
+                white_theme: '#fff',
+                black_theme: '#1B1B1B',
+                rose_theme: 'rgb(225 29 72)'
             }
         },
     },

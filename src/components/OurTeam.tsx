@@ -14,6 +14,7 @@ const OurTeam = ({theme}:ThemeType) => {
                         <div className="text-rose-600 text-xl font-bold font-['Raleway']">Вакансии Fintech</div>
                         <div className="w-14 h-14 justify-center items-center flex">
                             <div className="w-14 h-14 relative">
+                                <img src={hh}/>
                             </div>
                         </div>
                     </div>

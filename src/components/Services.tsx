@@ -25,12 +25,8 @@ const Services = ({theme}: ThemeType) => {
                     </p>
                 </div>
 
-                <p className='text-[#1B1B1B] p-4 text-[24px]'>
-                    FinTech специализируется <br/> на предоставлении услуг аккаунтинга, банкинга, управления платежными
-                    системами,
-                    HR сопровождения и ведения международной юридической деятельности для IT Компаний в Роcсии, Европе и
-                    Средней Азии
-                </p>
+
+                <div className="w-[328px] pl-4 text-white text-2xl font-medium font-['Raleway'] leading-9" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>FinTech специализируется на предоставлении услуг аккаунтинга, банкинга, управления платежными системами, HR сопровождения и ведения международной юридической деятельности для IT Компаний в Роcсии, Европе и Средней Азии</div>
             </div>
 
             <div className="hidden sm:inline-flex w-[1400px] h-[336px] justify-start items-start gap-16 mb-[160px]">

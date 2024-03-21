@@ -48,7 +48,8 @@ const MainPage = ({theme}: ThemeType) => {
             </div>
             <h1 className='sm:hidden'>
                 <div className="w-[328px] mb-[120px] h-72 flex-col justify-center items-end gap-0.5 inline-flex">
-                    <div className="self-stretch"><span className="text-zinc-900 text-[40px] font-medium font-['Raleway']">Оказываем </span>
+                    <div className="self-stretch"><span className="text-zinc-900 text-[40px] font-medium font-['Raleway']"
+                                                        style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Оказываем </span>
                         <span className="text-rose-600 text-[40px] font-medium font-['Raleway']">спектр услуг </span>
                         <span className="text-zinc-900 text-[40px] font-medium font-['Raleway']">в </span></div>
                     <div className="px-4 bg-neutral-100 rounded-[30px] justify-end items-center inline-flex">
@@ -57,7 +58,8 @@ const MainPage = ({theme}: ThemeType) => {
                     <div className="px-4 bg-neutral-100 rounded-[30px] justify-start items-start inline-flex">
                         <div className="w-[312px] text-zinc-900 text-[40px] font-medium font-['Raleway']">сопровождения</div>
                     </div>
-                    <div className="self-stretch"><span className="text-zinc-900 text-[40px] font-medium font-['Raleway']">деятельности<br/>
+                    <div className="self-stretch"><span className="text-zinc-900 text-[40px] font-medium font-['Raleway']"
+                                                        style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>деятельности<br/>
                     </span><span className="text-rose-600 text-[40px] font-medium font-['Raleway']">it-компаний</span></div>
                 </div>
             </h1>
@@ -65,9 +67,9 @@ const MainPage = ({theme}: ThemeType) => {
 
             <SliderAbility/>
             <Services theme={theme}/>
-            <SliderGoals/>
+            <SliderGoals theme={theme}/>
             <GoalsDesktop theme={theme}/>
-            <OurMission/>
+            <OurMission theme={theme}/>
             <DesktopOurMission theme={theme}/>
             <OurTeam theme={theme}/>
             <OurHrPolitics theme={theme}/>

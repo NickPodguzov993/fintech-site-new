@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import arrowRight from '../../public/images/arrowRight.svg'
 import Logo from "./svg/Logo";
+import ArrowSvg from "./svg/ArrowSvg";
 
 export type ThemeType = {
     theme: string
@@ -27,15 +28,16 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
                 <div className="h-12  items-center flex">
                     <div className="sm:w-[110.74px] h-12 relative" />
                     <div className="justify-start items-start gap-4 flex">
-                        <div className="sm:w-[109px] px-4 rounded-[50px] justify-center items-center gap-2 flex">
+                        <div className={` ${theme === 'light' ? 'text-black_theme' : 'text-white_theme'} sm:w-[109px] px-4 rounded-[50px] justify-center items-center gap-2 flex`}>
                             <NavLink  to="/contacts">
-                                <div className= {`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'} text-zinc-900 text-base font-bold font-['Raleway'] hidden sm:block hover:text-rose-600 leading-relaxed pt-2`}
+                                <div className= {`  text-base font-bold font-['Raleway'] hidden sm:block hover:text-rose_theme  leading-relaxed pt-2 
+                                `}
                                     >Контакты</div>
                             </NavLink>
                         </div>
                         <div className="w-[70px] sm:w-[124px] px-4 rounded-[50px] justify-center items-center gap-2 flex">
                             <NavLink  to="/policies">
-                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'} text-zinc-900 text-base font-bold font-['Raleway'] hidden sm:block hover:text-rose-600 leading-relaxed pt-2`}>Документы</div>
+                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'}  text-base font-bold font-['Raleway'] hidden sm:block hover:text-rose-600 leading-relaxed pt-2`}>Документы</div>
                             </NavLink>
 
                         </div>
@@ -44,10 +46,10 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
                             <input onChange={switchTheme} type="checkbox" />
                                 <span className="slider round"></span>
                         </label>
-                        <div className="hidden sm:flex  sm:w-[243px] h-10 self-stretch pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center gap-4 flex">
+                        <div className=" hidden sm:flex  sm:w-[243px] h-10 self-stretch pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center gap-4 flex">
                             <div className=" text-white text-base font-bold font-['Raleway'] leading-relaxed">Отправить резюме</div>
-                            <div className="w-9 h-9 p-2 bg-white rounded-[100px] justify-center items-center gap-3 flex">
-                                <img src={arrowRight}/>
+                            <div className="w-9 h-9 p-2 bg-white rounded-[100px] justify-center items-center gap-3 flex ">
+                                <img className='hover:translate-x-2 duration-300' src={arrowRight}/>
                             </div>
                         </div>
 

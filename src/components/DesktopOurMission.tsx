@@ -55,7 +55,7 @@ const DesktopOurMission = ({theme}: ThemeType) => {
                              data-aos="fade-down"
                              data-aos-delay="250"
                              data-aos-duration="1000">
-                            <div className={`${theme === 'light' ? 'bg-neutral-100' : 'bg-neutral-800'}h-[206px] p-8 left-0 top-[274px] absolute  bg-opacity-60 
+                            <div className={`${theme === 'light' ? 'bg-neutral-100' : 'bg-neutral-800'}h-[206px] p-8 left-0 top-[274px] absolute  bg-opacity-20 
                             rounded-[40px] backdrop-blur-[20px] flex-col justify-start items-start gap-4 inline-flex`}>
                                 <div className="self-stretch text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]"
                                      style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Экспертность</div>
