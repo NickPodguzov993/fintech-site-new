@@ -1,16 +1,28 @@
-
 import {ThemeType} from "./DesktopHeader";
 import SearchSvg from "./svg/SearchSvg";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import {useEffect} from "react";
 
 const DesktopOurMission = ({theme}: ThemeType) => {
+    useEffect(() => {
+        AOS.init({
+            disable: false
+        });
+    }, []);
+
     return (
         <div className='hidden sm:flex'>
             <div className="w-[1400px] h-[901px] flex-col justify-start items-center gap-20 inline-flex">
                 <div className="self-stretch justify-center items-center gap-16 inline-flex">
-                    <div className="grow shrink basis-0 flex-col justify-center items-start inline-flex">
+                    <div className="grow shrink basis-0 flex-col justify-center items-start inline-flex"
+                         data-aos="fade-right"
+                         data-aos-delay="350"
+                         data-aos-duration="1000">
                         <div className="self-stretch justify-start items-center gap-8 inline-flex">
                             <div className="text-zinc-900 text-[64px] font-medium font-['Raleway']"
-                                 style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наша миссия
+                                 style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}
+                                 >Наша миссия
                             </div>
                             <div className="p-6  rounded-[30px] justify-start items-center gap-2.5 flex"
                                  style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
@@ -24,7 +36,10 @@ const DesktopOurMission = ({theme}: ThemeType) => {
                         </div>
                     </div>
                     <div
-                        className="grow shrink basis-0 h-[120px] rounded-[40px] justify-center items-center gap-2.5 flex">
+                        className="grow shrink basis-0 h-[120px] rounded-[40px] justify-center items-center gap-2.5 flex"
+                        data-aos="fade-left"
+                        data-aos-delay="350"
+                        data-aos-duration="1000">
                         <div
                             className="grow shrink basis-0 text-zinc-900 text-xl font-medium font-['Raleway'] leading-[30px]"
                             style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Благодаря
@@ -36,17 +51,24 @@ const DesktopOurMission = ({theme}: ThemeType) => {
                 <div className="self-stretch h-[650px] flex-col justify-start items-center gap-4 flex">
                     <div className="self-stretch justify-center items-start gap-4 inline-flex">
                         <div className="w-[456px] h-[480px] relative  bg-no-repeat
-                         bg-[top_75px_right_50px] bg-[url('/images/Union.svg')]">
+                         bg-[top_75px_right_50px] bg-[url('/images/Union.svg')]"
+                             data-aos="fade-down"
+                             data-aos-delay="250"
+                             data-aos-duration="1000">
                             <div className={`${theme === 'light' ? 'bg-neutral-100' : 'bg-neutral-800'}h-[206px] p-8 left-0 top-[274px] absolute  bg-opacity-60 
                             rounded-[40px] backdrop-blur-[20px] flex-col justify-start items-start gap-4 inline-flex`}>
-                                <div className="self-stretch text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Экспертность</div>
-                                <div className="self-stretch text-zinc-900 text-base font-bold font-['Raleway'] leading-relaxed" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
+                                <div className="self-stretch text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]"
+                                     style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Экспертность</div>
+                                <div className="self-stretch text-zinc-900 text-base font-bold font-['Raleway'] leading-relaxed"
+                                     style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
                                     Мы аккумулируем полученный опыт и постоянно продолжаем учиться и развиваться. Рост компетенций для нас приоритет.</div>
                             </div>
                         </div>
                         <div
                             className="grow shrink basis-0 h-[480px] flex-col justify-start items-center gap-px inline-flex">
-                            <div
+                            <div data-aos="fade-down"
+                                 data-aos-delay="300"
+                                 data-aos-duration="1000"
                                 className="self-stretch grow shrink basis-0 p-8 rounded-[40px] flex-col justify-start items-start gap-4 flex"
                                 style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
                                 <div
@@ -60,7 +82,9 @@ const DesktopOurMission = ({theme}: ThemeType) => {
                                     (реалии).
                                 </div>
                             </div>
-                            <div
+                            <div data-aos="fade-down"
+                                 data-aos-delay="350"
+                                 data-aos-duration="1000"
                                 className="self-stretch grow shrink basis-0 p-8 rounded-[40px] flex-col justify-start items-start gap-4 flex"
                                 style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
                                 <div
@@ -77,8 +101,12 @@ const DesktopOurMission = ({theme}: ThemeType) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="grow shrink basis-0 h-[480px] p-8 bg-rose-600 rounded-[40px] flex-col justify-end items-start gap-4 inline-flex bg-no-repeat
-                         bg-[top_-75px_right_60px] bg-[url('/images/figureForMission.svg')]">
+                        <div className="grow shrink basis-0 h-[480px] p-8 bg-rose-600 rounded-[40px]
+                         flex-col justify-end items-start gap-4 inline-flex bg-no-repeat
+                         bg-[top_-75px_right_60px] bg-[url('/images/figureForMission.svg')]"
+                             data-aos="fade-down"
+                             data-aos-delay="400"
+                             data-aos-duration="1000">
 
                             <div
                                 className="self-stretch text-white text-[32px] font-medium font-['Raleway'] leading-[48px]">Инновационность
@@ -93,7 +121,10 @@ const DesktopOurMission = ({theme}: ThemeType) => {
                     </div>
                     <div
                         className='back'
-                        style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
+                        style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}
+                        data-aos="fade-down"
+                        data-aos-delay="450"
+                        data-aos-duration="1000">
                         <div
                             className="self-stretch text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]"
                             style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Клиентоориентированность

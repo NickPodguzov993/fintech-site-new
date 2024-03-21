@@ -1,4 +1,4 @@
-import { useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import heart from '../../public/images/heart.svg'
 import BonusComponent from "./BonusComponent";
 import {ThemeType} from "./DesktopHeader";
@@ -15,7 +15,7 @@ import LearnEnglish from '../../public/images/learnEnglish.jpg'
 
 type SuperObjType = {
     [key: string]: ConfigType
-    }
+}
 
 export type ConfigType = {
     title: string,
@@ -94,7 +94,7 @@ const BonusesDesktop = ({theme}: ThemeType) => {
         }
     }, [isClicked])
 
-    const handleClick = (key:string) => {
+    const handleClick = (key: string) => {
         setIndex(key)
         setIsClicked(true)
     }
@@ -102,7 +102,10 @@ const BonusesDesktop = ({theme}: ThemeType) => {
     return (
         <div className='hidden sm:block relative'>
             <div className="hidden sm:inline-flex w-[1400px] h-24 justify-center items-center gap-16 ">
-                <div className="grow shrink basis-0 h-24 justify-start items-center gap-8 flex">
+                <div className="grow shrink basis-0 h-24 justify-start items-center gap-8 flex"
+                     data-aos="fade-right"
+                     data-aos-delay="350"
+                     data-aos-duration="1000">
                     <div className="text-zinc-900 text-[64px] font-medium font-['Raleway']"
                          style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наши бонусы
                     </div>
@@ -111,7 +114,9 @@ const BonusesDesktop = ({theme}: ThemeType) => {
                     </div>
                 </div>
                 <div className="grow shrink basis-0 text-zinc-900 text-xl font-medium font-['Raleway'] leading-[30px]"
-                     style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Для наших сотрудников мы разработали
+                     style={{color: theme === 'light' ? '#1B1B1B' : 'white'}} data-aos="fade-left"
+                     data-aos-delay="350"
+                     data-aos-duration="1000">Для наших сотрудников мы разработали
                     ценностное предложение, основанное на современных HR-методиках.
                 </div>
             </div>
@@ -119,7 +124,8 @@ const BonusesDesktop = ({theme}: ThemeType) => {
                 <BonusDescription config={superObj[index]} theme={theme}/>
                 <div className='sm:flex sm:flex-wrap sm:w-[668px] sm:ml-[720px] sm:mt-[40px] '>
                     {Object.entries(superObj).map(([key, value]) => (
-                        <BonusComponent onClick={() => handleClick(key)} num={key} isActive={index===key} title={value.title}
+                        <BonusComponent onClick={() => handleClick(key)} num={key} isActive={index === key}
+                                        title={value.title}
                                         theme={theme}/>))}
                 </div>
 

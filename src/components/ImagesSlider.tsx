@@ -45,7 +45,10 @@ const ImagesSlider = ({theme}:ThemeType) => {
 
     return (
         <div>
-            <div className="w-[552px] h-24 justify-start items-center gap-8 hidden sm:inline-flex mb-8">
+            <div className="w-[552px] h-24 justify-start items-center gap-8 hidden sm:inline-flex mb-8"
+                 data-aos="fade-down"
+                 data-aos-delay="250"
+                 data-aos-duration="1000">
                 <div className=" text-zinc-900 text-[64px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#FF1744' : 'white'}}>Мы в Ростове</div>
                 <div className="p-6 bg-rose-600 rounded-[30px] justify-start items-center gap-2.5 flex">
                     <div className="w-12 h-12 relative" ><img src={loc}/></div>
@@ -114,11 +117,11 @@ const ImagesSlider = ({theme}:ThemeType) => {
                                             <p className="
                                     justify-end text-[#1B1B1B] text-base sm:text-xl duration-300 text-2xl
                                     font-medium font-['Raleway'] leading-9 sm:leading-loose leading-relaxed"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
-                                                Уютный и просторный офис
+                                                Оборудованные рабочие места
                                             </p>
                                             <span
                                                 className="hover-span"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
-                                Здесь все создано для удобства сотрудников: просторные помещения, современная техника, удобная мебель
+                                В нашем офисе у каждого сотрудника оборудованно рабочее место
                                     </span>
                                         </div> :
                                         <p className="w-[200px] justify-end text-white text-base sm:text-xl duration-300 font-['Raleway'] sm:leading-loose leading-relaxed">
@@ -150,11 +153,11 @@ const ImagesSlider = ({theme}:ThemeType) => {
                                             <p className="animate-fade-down animate-once animate-duration-300 animate-delay-[800ms] animate-ease-linear animate-normal
                                     justify-end text-[#1B1B1B] text-base sm:text-xl duration-300 text-2xl
                                     font-medium font-['Raleway'] leading-9 sm:leading-loose leading-relaxed"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
-                                                Уютный и просторный офис
+                                                Большая комната отдыха
                                             </p>
                                             <span
                                                 className="hover-span"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
-                                Здесь все создано для удобства сотрудников: просторные помещения, современная техника, удобная мебель
+                                Комната отдыха обустроена всем необходимым для комфортного обеда и перекуса: кофемашина, холодильник, микроволновка и многое другое
                                     </span>
                                         </div>:
                                         <p className="w-[200px] justify-end text-white text-base sm:text-xl duration-300 font-['Raleway'] sm:leading-loose leading-relaxed">
@@ -186,11 +189,11 @@ const ImagesSlider = ({theme}:ThemeType) => {
                                             <p className="animate-fade-down animate-once animate-duration-300 animate-delay-[800ms] animate-ease-linear animate-normal
                                     justify-end text-[#1B1B1B] text-base sm:text-xl duration-300 text-2xl
                                     font-medium font-['Raleway'] leading-9 sm:leading-loose leading-relaxed"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
-                                                Уютный и просторный офис
+                                                Open space пространство
                                             </p>
                                             <span
                                                 className="hover-span"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>
-                                Здесь все создано для удобства сотрудников: просторные помещения, современная техника, удобная мебель
+                                В нашем офисе присутствуют как отдельные комнаты так и открытые пространства, поэтому каждый может почувствовать себя как дома, что положительно сказывается на продуктивности работы.
                                     </span>
                                         </div> :
                                         <p className="w-[200px] justify-end text-white text-base sm:text-xl duration-300  sm:leading-loose font-['Raleway'] leading-relaxed">

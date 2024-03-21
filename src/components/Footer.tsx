@@ -50,7 +50,10 @@ const Footer = ({theme}:ThemeType) => {
                     </div>
                 </div>
             </div>
-            <div className="hidden w-[1400px] h-[363px] p-8  rounded-[40px] flex-col justify-start items-start gap-8 sm:inline-flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
+            <div className="hidden w-[1400px] h-[363px] p-8  rounded-[40px] flex-col justify-start items-start gap-8 sm:inline-flex"
+                 style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}  data-aos="fade-down"
+                 data-aos-delay="250"
+                 data-aos-duration="1000">
                 <div className="w-[110.84px] h-12 relative" />
                 <div className="self-stretch justify-between items-start inline-flex">
                     <div className="w-[195px] self-stretch text-zinc-900 text-base font-medium font-['Mulish']"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>FinTech<br/>© 2024 All rights reserved </div>

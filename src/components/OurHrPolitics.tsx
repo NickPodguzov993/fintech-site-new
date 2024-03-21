@@ -115,7 +115,10 @@ const OurHrPolitics = ({theme}:ThemeType) => {
     return (
         <div className="fc gap-8 justify-start items-start w-full">
             <div className='flex p-4'>
-                <h2 className=' text-[32px] sm:text-[64px]' style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наша HR-политика</h2>
+                <h2 className=' text-[32px] sm:text-[64px]' style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}
+                    data-aos="fade-down"
+                    data-aos-delay="250"
+                    data-aos-duration="1000">Наша HR-политика</h2>
             </div>
 
             <div className="fc sm:flex-row-reverse sm:justify-between sm:w-full px-4 gap-4 justify-start items-start">
@@ -133,12 +136,11 @@ const OurHrPolitics = ({theme}:ThemeType) => {
                     ))}
                 </div>
                 <div className='hidden sm:flex'>
-                    {/*<HrPoliticsComponent theme={theme} title={'Заработная'} title2={'плата'} description={'Заработная плата пересматривается ежегодно по итогам Perfomance Rewier'} img={loyality}/>
-                    <HrPoliticsComponent theme={theme} title={'Реферальный'} title2={'бонус'} description={'Порекомендуй компании талантливого кандидата и получи премию'} img={education}/>
-                    <HrPoliticsComponent theme={theme} title={'Кафетерий'} title2={'бенефитов'} description={'Компенсация занятий спортом, увлечений, обучающих курсов с трудовой фиксацией'} img={cake}/>
-                    <HrPoliticsComponent theme={theme} title={'Vel accumsan'} title2={'Ornare amet, tortor'} description={'In est. Dictum non consectetur consectetur elit. Non sit e.'} img={education}/>*/}
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'}  w-[400px] h-[402px] flex-col justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
-         rounded-[40px] hover:text-white`} >
+         rounded-[40px] hover:text-white`}
+                         data-aos="fade-down"
+                         data-aos-delay="250"
+                         data-aos-duration="1000">
                         <div
                             className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
                             <div className="px-4 py-2 rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
@@ -164,21 +166,25 @@ const OurHrPolitics = ({theme}:ThemeType) => {
 
 
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'}  w-[400px] h-[402px] flex-col justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
-         rounded-[40px] hover:text-white`} >
+         rounded-[40px] hover:text-white`}
+                         data-aos="fade-down"
+                         data-aos-delay="350"
+                         data-aos-duration="1000">
                         <div
-                            className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
+                            className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]"
+                            >
                             <div className="px-4 py-2 rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Заработная</div>
+                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Реферальный</div>
                             </div>
                             <div className="px-4 py-2  rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>плата</div>
+                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>бонус</div>
                             </div>
                         </div>
                         <div
                             className="self-stretch grow shrink basis-0 p-8 rounded-bl-[40px] rounded-br-[40px] flex-col justify-between items-end flex ">
                             <div
                                 className={` self-stretch text-zinc-900 text-base font-bold font-['Raleway'] leading-relaxed`}
-                                style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Заработная плата пересматривается ежегодно по итогам Perfomance Rewier
+                                style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Порекомендуй компании талантливого кандидата и получи премию
                             </div>
                             <div className="w-20 h-20 p-4 bg-white rounded-[20px] justify-start items-end gap-[26px] inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
                                 <EducationSvg theme={theme}/>
@@ -187,21 +193,24 @@ const OurHrPolitics = ({theme}:ThemeType) => {
                     </div>
 
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'}  w-[400px] h-[402px] flex-col justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
-         rounded-[40px] hover:text-white`} >
+         rounded-[40px] hover:text-white`}
+                         data-aos="fade-down"
+                         data-aos-delay="450"
+                         data-aos-duration="1000">
                         <div
                             className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
                             <div className="px-4 py-2 rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Заработная</div>
+                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Кафетерий</div>
                             </div>
                             <div className="px-4 py-2  rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>плата</div>
+                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>бенефитов</div>
                             </div>
                         </div>
                         <div
                             className="self-stretch grow shrink basis-0 p-8 rounded-bl-[40px] rounded-br-[40px] flex-col justify-between items-end flex ">
                             <div
                                 className={` self-stretch text-zinc-900 text-base font-bold font-['Raleway'] leading-relaxed`}
-                                style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Заработная плата пересматривается ежегодно по итогам Perfomance Rewier
+                                style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Компенсация занятий спортом, увлечений, обучающих курсов с трудовой фиксацией
                             </div>
                             <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[white]'} p-4 rounded-[20px] justify-start items-end gap-[26px] inline-flex`}>
                                 <div className="w-20 h-20 p-4 bg-white rounded-[20px] justify-start items-end gap-[26px] inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
@@ -211,21 +220,24 @@ const OurHrPolitics = ({theme}:ThemeType) => {
                         </div>
                     </div>
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'}  w-[400px] h-[402px] flex-col justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
-         rounded-[40px] hover:text-white`} >
+         rounded-[40px] hover:text-white`}
+                         data-aos="fade-down"
+                         data-aos-delay="550"
+                         data-aos-duration="1000">
                         <div
                             className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
                             <div className="px-4 py-2 rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Заработная</div>
+                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Vel accumsan</div>
                             </div>
                             <div className="px-4 py-2  rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>плата</div>
+                                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Ornare amet, tortor</div>
                             </div>
                         </div>
                         <div
                             className="self-stretch grow shrink basis-0 p-8 rounded-bl-[40px] rounded-br-[40px] flex-col justify-between items-end flex ">
                             <div
                                 className={` self-stretch text-zinc-900 text-base font-bold font-['Raleway'] leading-relaxed`}
-                                style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Заработная плата пересматривается ежегодно по итогам Perfomance Rewier
+                                style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>In est. Dictum non consectetur consectetur elit. Non sit e.
                             </div>
                             <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[white]'} p-4 rounded-[20px] justify-start items-end gap-[26px] inline-flex`}>
                                 <div className="w-20 h-20 p-4 bg-white rounded-[20px] justify-start items-end gap-[26px] inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
