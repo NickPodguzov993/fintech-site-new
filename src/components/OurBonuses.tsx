@@ -101,7 +101,7 @@ const OurBonuses = ({theme}: ThemeType) => {
     }
 
     return (
-        <div className="sm:hidden fc gap-8 justify-start items-start w-full relative mt-[120px]">
+        <div className="sm:hidden fc gap-8 justify-start items-start w-full relative mt-[120px] mb-[120px]">
             <div className="w-[328px] h-16 px-[16px] justify-between items-center inline-flex">
                 <div className="text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наши бонусы</div>
                 <div className="p-4 bg-rose-600 rounded-[20px] justify-start items-center gap-2.5 flex">
@@ -121,7 +121,7 @@ const OurBonuses = ({theme}: ThemeType) => {
                                         <div key={c.id} onClick={() => handleClick(c.id)}
                                              className={`${theme === 'light' ? "bg-white_theme text-rose-600 " : "bg-[#212121] text-white_theme border-none"}
                                    
-                                             w-[290px] h-[58px] mx-1 px-3  rounded-[20px] border border-rose-600 justify-center hover:bg-rose_theme hover:text-white_theme items-center gap-2 inline-flex `}
+                                             w-[290px] h-[58px] mx-1 px-3 mb-2  rounded-[20px] border border-rose-600 justify-center hover:bg-rose_theme hover:text-white_theme items-center gap-2 inline-flex `}
                                         >
                                             <div
                                                 className=" text-base font-bold font-['Raleway'] leading-relaxed" style={{color: theme === 'light' ? '#FF1744' : 'white'}}>{c.id}</div>

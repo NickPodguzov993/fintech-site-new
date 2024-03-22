@@ -4,6 +4,15 @@ import copy from '../../public/images/copy.svg'
 
 
 const Contacts = ({theme}:ThemeType) => {
+    const copyTextToClipboard = async (text) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            console.log('Текст успешно скопирован в буфер обмена!');
+        } catch (err) {
+            console.error('Ошибка:', err);
+        }
+    };
+
     return (
         <div>
             <div className='hidden sm:block mt-[160px] w-[1400px] animate-fade-down animate-once animate-duration-1000 animate-delay-300 animate-ease-linear animate-normal'>
@@ -20,7 +29,7 @@ const Contacts = ({theme}:ThemeType) => {
                                     <div className="text-rose-600 text-[32px] font-medium font-['Raleway'] leading-[48px]">fintech@gmail.com</div>
                                 </div>
                                 <div className="w-24 self-stretch px-8 py-4 bg-white rounded-[30px] justify-center items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                    <div className="w-8 h-8 relative" ><img src={copy}/></div>
+                                    <div className="w-8 h-8 relative"  onClick={() => copyTextToClipboard('fintech@gmail.com')}><img src={copy}/></div>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +64,7 @@ const Contacts = ({theme}:ThemeType) => {
                                         <div className="text-rose-600 text-2xl font-medium font-['Raleway'] leading-9">fintech@gmail.com</div>
                                     </div>
                                     <div className="w-12 self-stretch p-4 bg-white rounded-[15px] justify-center items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                        <div className="w-4 h-4 relative" ><img src={copy}/></div>
+                                        <div className="w-4 h-4 relative" onClick={() => copyTextToClipboard('fintech@gmail.com')}><img src={copy}/></div>
                                     </div>
                                 </div>
                             </div>
