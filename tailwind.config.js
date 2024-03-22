@@ -132,7 +132,7 @@ export default {
                 bg: "#D9E6F9",
                 white_theme: '#fff',
                 black_theme: '#1B1B1B',
-                rose_theme: 'rgb(225 29 72)'
+                rose_theme: '#FF1744'
             }
         },
     },
