@@ -1,4 +1,6 @@
 import {ThemeType} from "./DesktopHeader";
+import arrow from '../../public/images/arrowBack.svg'
+import copy from '../../public/images/copy.svg'
 
 
 const Contacts = ({theme}:ThemeType) => {
@@ -18,7 +20,7 @@ const Contacts = ({theme}:ThemeType) => {
                                     <div className="text-rose-600 text-[32px] font-medium font-['Raleway'] leading-[48px]">fintech@gmail.com</div>
                                 </div>
                                 <div className="w-24 self-stretch px-8 py-4 bg-white rounded-[30px] justify-center items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                    <div className="w-8 h-8 relative" />
+                                    <div className="w-8 h-8 relative" ><img src={copy}/></div>
                                 </div>
                             </div>
                         </div>
@@ -28,8 +30,9 @@ const Contacts = ({theme}:ThemeType) => {
                         </div>
                     </div>
                     <div className="w-[684px] self-stretch p-8 bg-rose-600 rounded-[40px] flex-col justify-center items-center gap-4 inline-flex">
-                        <div className="w-16 h-16 p-[9.37px] bg-white rounded-[20px] justify-center items-center inline-flex">
-                            <div className="w-8 h-8 relative origin-top-left rotate-[135deg] flex-col justify-start items-start flex" />
+                        <div className="w-16 relative h-16 p-[9.37px] bg-white rounded-[20px] justify-center items-center inline-flex">
+                            <div className="w-8 h-8 absolute left-[20px] rotate-[-45deg] flex-col justify-start items-start flex" >
+                                <img src={arrow}/></div>
                         </div>
                         <div className="text-white text-xl font-medium font-['Raleway'] leading-[30px]">Мы в hh</div>
                         <div className="text-white text-[32px] font-medium font-['Raleway'] leading-[48px]">fintech@gmail.com</div>
@@ -52,7 +55,7 @@ const Contacts = ({theme}:ThemeType) => {
                                         <div className="text-rose-600 text-2xl font-medium font-['Raleway'] leading-9">fintech@gmail.com</div>
                                     </div>
                                     <div className="w-12 self-stretch p-4 bg-white rounded-[15px] justify-center items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                        <div className="w-4 h-4 relative" />
+                                        <div className="w-4 h-4 relative" ><img src={copy}/></div>
                                     </div>
                                 </div>
                             </div>
@@ -61,9 +64,9 @@ const Contacts = ({theme}:ThemeType) => {
                                 <div className="self-stretch text-center text-zinc-900 text-base font-bold font-['Raleway'] leading-relaxed" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>344034, Россия, Ростовская обл., Город Ростов-на-Дону, Портовая ул., 63, Офис 4</div>
                             </div>
                         </div>
-                        <div className="self-stretch h-[140px] p-8 bg-rose-600 rounded-[30px] flex-col justify-center items-center gap-4 flex">
-                            <div className="w-10 h-10 px-4 bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
-                                <div className="w-4 h-4 relative origin-top-left rotate-[135deg]" />
+                        <div className="self-stretch h-[140px] bg-rose-600 rounded-[30px] relative flex-col justify-center items-center gap-4 flex">
+                            <div className="w-10 h-10 bg-white rounded-[15px] absolute top-[10px] right-[30px]  justify-center items-center gap-2.5 inline-flex">
+                                <div className="absolute rotate-[-35deg]" ><img src={arrow}/></div>
                             </div>
                             <div className="text-white text-base font-medium font-['Raleway'] leading-normal">Мы в hh</div>
                             <div className="text-white text-2xl font-medium font-['Raleway'] leading-9">fintech@gmail.com</div>

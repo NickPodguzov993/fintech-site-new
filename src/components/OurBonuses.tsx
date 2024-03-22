@@ -118,7 +118,7 @@ const OurBonuses = ({theme}: ThemeType) => {
                             if (index < 4) {
                                 return (
                                     <div>
-                                        <div onClick={() => handleClick(c.id)}
+                                        <div key={c.id} onClick={() => handleClick(c.id)}
                                              className={`${theme === 'light' ? "bg-white_theme text-rose-600" : "bg-black-theme text-white_theme border-none"}
                                              w-[290px] h-[58px] mx-1 px-3   bg-white rounded-[20px] border border-rose-600 justify-center items-center gap-2 mb-2 inline-flex`}
                                              style={{backgroundColor: theme === 'light' ? 'white' : '#212121'}} >
@@ -143,7 +143,7 @@ const OurBonuses = ({theme}: ThemeType) => {
                             if (index > 3) {
                                 return (
                                     <div>
-                                        <div onClick={() => handleClick(c.id)}
+                                        <div key={c.id} onClick={() => handleClick(c.id)}
                                              className={`${theme === 'light' ? "bg-white_theme text-rose-600" : "bg-black-theme text-white_theme border-none"}
                                              w-[290px] h-[58px] mx-1 px-3   bg-white rounded-[20px] border border-rose-600 justify-center items-center gap-2 inline-flex`}
                                              style={{backgroundColor: theme === 'light' ? 'white' : '#212121'}}

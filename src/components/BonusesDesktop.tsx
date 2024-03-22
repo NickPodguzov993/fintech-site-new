@@ -124,7 +124,7 @@ const BonusesDesktop = ({theme}: ThemeType) => {
                 <BonusDescription config={superObj[index]} theme={theme}/>
                 <div className='sm:flex sm:flex-wrap sm:w-[668px] sm:ml-[720px] sm:mt-[40px] '>
                     {Object.entries(superObj).map(([key, value]) => (
-                        <BonusComponent onClick={() => handleClick(key)} num={key} isActive={index === key}
+                        <BonusComponent  onClick={() => handleClick(key)} num={key} isActive={index === key}
                                         title={value.title}
                                         theme={theme}/>))}
                 </div>

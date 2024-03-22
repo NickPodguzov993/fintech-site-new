@@ -1,4 +1,5 @@
 import {ThemeType} from "./DesktopHeader";
+import doc from '../../public/images/doc.svg'
 
 const Policies = ({theme}:ThemeType) => {
     return (
@@ -8,9 +9,10 @@ const Policies = ({theme}:ThemeType) => {
                 <div className="w-[800px] h-[1036px] flex-col justify-start items-end gap-16 inline-flex">
                     <div className="self-stretch justify-start items-center gap-8 inline-flex">
                         <div className="text-zinc-900 text-[64px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Документы</div>
-                        <div className="p-6 bg-neutral-100 rounded-[30px] justify-start items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
-                            <div className="w-12 h-12 px-[2.49px] justify-center items-center flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
+                        <div className="p-6 bg-neutral-100 rounded-[30px] justify-start items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : 'white'}}>
+                            <div className="w-12 h-12 px-[2.49px] justify-center items-center flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : 'white'}}>
                                 <div className="w-[43.02px] h-12 relative" >
+                                    <img src={doc}/>
                                 </div>
                             </div>
                         </div>
@@ -62,9 +64,10 @@ const Policies = ({theme}:ThemeType) => {
             <div className="sm:hidden w-[360px] mt-[120px]  px-4 flex-col justify-start items-start gap-8 inline-flex">
                 <div className="self-stretch justify-between items-center inline-flex">
                     <div className="grow shrink basis-0 text-zinc-900 text-[40px] font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Документы</div>
-                    <div className="p-4 bg-neutral-100 rounded-[20px] justify-start items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
+                    <div className="p-4 bg-neutral-100 rounded-[20px] justify-start items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : 'white'}}>
                         <div className="w-8 h-8 px-[1.66px] justify-center items-center flex" >
                             <div className="w-[28.68px] h-8 relative">
+                                <img src={doc}/>
                             </div>
                         </div>
                     </div>

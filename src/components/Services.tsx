@@ -1,8 +1,8 @@
-import search from '../../public/images/search.svg'
 import {ThemeType} from "./DesktopHeader";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import {useEffect} from "react";
+import SearchWithLineSvg from "./svg/SearchWithLineSvg";
 
 const Services = ({theme}: ThemeType) => {
     useEffect(() => {
@@ -19,7 +19,7 @@ const Services = ({theme}: ThemeType) => {
                     <div className='flex justify-between p-4 '><h2 className='text-[32px]'
                                                                    style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Спектр
                         услуг</h2>
-                        <img src={search} alt=""/></div>
+                        <SearchWithLineSvg theme={theme}  width={"64"} height={"64"} /></div>
                     <p className='p-4 text-[16px] text-[#707070]'>
                         Мы предлагаем широкий спектр услуг в сфере сопровождения операционной деятельности IT Компаний
                     </p>
@@ -39,8 +39,8 @@ const Services = ({theme}: ThemeType) => {
                         <div className="text-zinc-900 text-[64px] font-medium font-['Raleway']"
                              style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Спектр услуг
                         </div>
-                        <div className="p-6 bg-neutral-100 rounded-[30px] justify-start items-center gap-2.5 flex">
-                            <div className="w-14 h-14 relative"><img src={search} alt=""/></div>
+                        <div className="p-6  rounded-[30px] justify-start items-center gap-2.5 flex">
+                            <div className="w-14 h-14 relative"><SearchWithLineSvg theme={theme}  width={"96"} height={"96"} /></div>
                         </div>
                     </div>
                     <div

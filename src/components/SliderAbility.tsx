@@ -101,7 +101,7 @@ const SliderAbility = () => {
             <div className=" w-full   justify-start items-start inline-flex flex-col overflow-y-hidden">
                 <div className="flex flex-row  px-4">
                     {cards.map(c => (
-                        <div onTouchStart={() => touchStart(c.id)} onTouchEnd={() => touchEnd(c.id)}
+                        <div key={c.id} onTouchStart={() => touchStart(c.id)} onTouchEnd={() => touchEnd(c.id)}
                              className="w-[300px]  h-[300px] sm:w-[350px] sm:h-[350px]  flex-col justify-between items-start inline-flex">
 
                             <div>

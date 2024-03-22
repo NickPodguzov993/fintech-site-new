@@ -66,7 +66,7 @@ const SliderGoals = ({theme}:ThemeType) => {
             <div className="sm:hidden w-full  justify-start items-start inline-flex flex-col overflow-y-hidden">
                 <div className="flex flex-row  px-4">
                     {cards.map(c => (
-                        <div onTouchStart={() => touchStart(c.id)} onTouchEnd={() => touchEnd(c.id)}
+                        <div key={c.id} onTouchStart={() => touchStart(c.id)} onTouchEnd={() => touchEnd(c.id)}
                              className="w-[300px]  h-[332px]   flex-col justify-between items-start ml-2 inline-flex">
                                 <div className="w-[300px] h-[332px] rounded-[30px] flex-col justify-start items-start inline-flex"  style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
                                     <div className="self-stretch grow shrink basis-0 p-4 flex-col justify-start items-center gap-4 flex">
