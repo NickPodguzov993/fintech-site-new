@@ -1,29 +1,41 @@
 import { NavLink } from "react-router-dom";
 import arrowRight from '../../public/images/arrowRight.svg'
 import Logo from "./svg/Logo";
-import ArrowSvg from "./svg/ArrowSvg";
+import MenuSvg from "./svg/MenuSvg";
+import {useState} from "react";
+import BurgerMenu from "./BurgerMenu";
 
 export type ThemeType = {
     theme: string
     switchTheme?: () => void
+    width?: string
+    height?: string
 }
 
 
 const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
 
+    const [open,setOpen] = useState(false)
+
+    const openMenu = () => {
+        setOpen(!open)
+    }
+
     return (
         <>
+            {open && <BurgerMenu openMenu={openMenu} theme={theme}/>}
             <div  className={`${theme === 'light' ? "bg-white" : "bg-[#212121]"} w-[360px]  sm:w-[1440px] inline-flex flex h-20 p-4  bg-opacity-90  sm:justify-between items-center fixed z-20 `}>
                 <NavLink  to="/">
                     <Logo theme={theme}/>
                 </NavLink>
-                <div className="fixed sm:hidden w-[264px] h-16 p-2 bg-white rounded-[30px] top-[528px] right-[8px] z-90 shadow justify-start items-start gap-1 inline-flex">
-                    <div className="w-[196px] h-12 px-8 bg-rose-600 rounded-[100px] justify-start items-center gap-1 inline-flex">
+                <div className="fixed sm:hidden w-[264px] h-16 p-2 bg-white rounded-[30px] top-[528px] right-[8px] z-90 shadow justify-start items-start gap-1 inline-flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
+                    <div className="w-[196px] relative h-12 px-8 bg-rose-600 rounded-[100px] justify-start items-center gap-1 inline-flex">
                         <div className="text-white text-sm font-bold font-['Raleway'] leading-snug">Отправить резюме</div>
                     </div>
                     <div className="w-12 h-12 p-2.5 rounded-[100px] justify-center items-center gap-2.5 flex">
-                        <div className="w-4 h-4 py-[2.40px] justify-center items-center flex" />
+                        <div className="w-4 h-4 py-[2.40px] justify-center items-center flex" onClick={openMenu}><MenuSvg theme={theme}/></div>
                     </div>
+
                 </div>
                 <div className="h-12  items-center flex">
                     <div className="sm:w-[110.74px] h-12 relative" />

@@ -27,8 +27,8 @@ const OurMission = ({theme}:ThemeType) => {
 
                     <div className="w-[300px] h-[480px] mr-2 relative  bg-no-repeat
                          bg-[top_75px_right_-120px] bg-[url('/images/Union.svg')]">
-                        <div className={`${theme === 'light' ? 'bg-neutral-100' : 'bg-neutral-800'} h-[196px] p-8 left-0 top-[284px] absolute bg-neutral-100
-                         bg-opacity-20 rounded-[40px] backdrop-blur-[20px] flex-col justify-start items-start gap-2 inline-flex`}>
+                        <div className={`${theme === 'light' ? 'bg-neutral-100' : 'bg-neutral-800'} h-[196px] p-8 left-0 top-[284px] absolute 
+                         bg-opacity-20 rounded-[40px] backdrop-blur-[30px] flex-col justify-start items-start gap-2 inline-flex`}>
                             <div className="self-stretch text-zinc-900 text-2xl font-medium font-['Raleway'] leading-9" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Экспертность</div>
                             <div className="self-stretch text-zinc-900 text-sm font-bold font-['Raleway'] leading-snug" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Мы аккумулируем полученный опыт и постоянно продолжаем учиться и развиваться. Рост компетенций для нас приоритет.</div>
                         </div>

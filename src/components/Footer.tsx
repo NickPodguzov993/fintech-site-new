@@ -1,9 +1,8 @@
-import logo from '../../public/images/Logo.svg'
-import bigLogo from '../../public/images/fintechblacktext.svg'
 import arrow from '../../public/images/arrowBack.svg'
 import {ThemeType} from "./DesktopHeader";
 import BigLogo from "./svg/BigLogo";
 import {NavLink} from "react-router-dom";
+import Logo from "./svg/Logo";
 
 
 const Footer = ({theme}:ThemeType) => {
@@ -13,7 +12,7 @@ const Footer = ({theme}:ThemeType) => {
         <div className='relative mb-[120px]'>
             <div
                 className="sm:hidden w-[360px] h-[520px] px-4 py-8  rounded-[30px] flex-col justify-start items-start gap-8 inline-flex mb-[120px]">
-                <div className="w-[110.84px] h-12 relative"><img src={logo} alt="logo"/></div>
+                <div className="w-[110.84px] h-12 relative"><Logo theme={theme}/></div>
                 <div className="self-stretch h-[312px] flex-col justify-start items-start gap-8 flex">
                     <div className="w-[195px] h-14 text-zinc-900 text-base font-medium font-['Mulish']"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>FinTech<br/>©
                         2024 All rights reserved
@@ -21,9 +20,11 @@ const Footer = ({theme}:ThemeType) => {
                     <div className="flex-col justify-start items-start flex">
                         <div
                             className="self-stretch h-12 px-4 rounded-[50px] justify-start items-center gap-2 inline-flex">
+                            <NavLink  to="/">
                             <div
                                 className=" text-base font-bold font-['Raleway'] leading-relaxed"  style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Главная
                             </div>
+                            </NavLink>
                         </div>
                         <div
                             className="self-stretch h-12 px-4 rounded-[50px] justify-start items-center gap-2 inline-flex">
@@ -48,7 +49,7 @@ const Footer = ({theme}:ThemeType) => {
                             <div className="w-6 h-6 relative origin-top-left "><img src={arrow} /></div>
                         </div>
                         <div className='absolute top-[476px] right-[0px] w-full rounded-[30px] '>
-                            <img  src={bigLogo} className='rounded-b-[30px]' alt=""/>
+                            <BigLogo theme={theme} width={'360'} height={'47'}/>
                         </div>
                     </div>
                 </div>
@@ -84,7 +85,7 @@ const Footer = ({theme}:ThemeType) => {
                         </div>
                     </div>
                 </div>
-                <div className='absolute top-[225px] left-[100px]'><BigLogo theme={theme}/></div>
+                <div className='absolute top-[225px] left-[100px]'><BigLogo theme={theme} width={'1200'} height={'137'}/></div>
             </div>
 
         </div>

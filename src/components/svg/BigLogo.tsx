@@ -1,10 +1,10 @@
 
 import {ThemeType} from "../DesktopHeader";
 
-const BigLogo = ({theme}:ThemeType) => {
+const BigLogo = ({theme, width, height}:ThemeType) => {
     return (
         <div>
-            <svg width="1200" height="137" viewBox="0 0 1200 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width= {width} height={height} viewBox="0 0 1200 137" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M39.3994 35.0439V60.0176H132.711V90.6338H39.3994V148H0.632812V4.42773H137.831V35.0439H39.3994Z" fill={theme === 'light' ? "#1B1B1B" : 'white'}/>
                 <path d="M170.955 148V4.42773H209.722V148H170.955Z" fill="#FF1744"/>
                 <path d="M390.389 148L293.524 49.3594V148H254.758V4.42773H296.868L393.837 103.486V4.42773H432.395V148H390.389Z" fill="#FF1744"/>

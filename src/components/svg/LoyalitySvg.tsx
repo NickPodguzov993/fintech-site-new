@@ -1,10 +1,10 @@
 import {ThemeType} from "../DesktopHeader";
 
 
-const LoyalitySvg = ({theme}:ThemeType) => {
+const LoyalitySvg = ({theme, width, height}:ThemeType) => {
     return (
         <div>
-            <svg width="48" height="48" viewBox="0 0 48 48" fill={theme === 'light' ? "#1B1B1B" : 'white'} xmlns="http://www.w3.org/2000/svg">
+            <svg width={width} height={height} viewBox="0 0 48 48" fill={theme === 'light' ? "#1B1B1B" : 'white'} xmlns="http://www.w3.org/2000/svg">
                 <path d="M26 35L33 28C33.3667 27.6333 33.6583 27.2 33.875 26.7C34.0917 26.2 34.2 25.6667
  34.2 25.1C34.2 23.9667 33.8 23 33 22.2C32.2 21.4 31.2333 21 30.1 21C29.4667 21 28.8417
   21.1833 28.225 21.55C27.6083 21.9167 26.8667 22.5333 26 23.4C25 22.4667 24.2167

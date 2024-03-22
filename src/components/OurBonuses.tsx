@@ -101,14 +101,16 @@ const OurBonuses = ({theme}: ThemeType) => {
     }
 
     return (
-        <div className="sm:hidden fc gap-8 justify-start items-start w-full relative">
+        <div className="sm:hidden fc gap-8 justify-start items-start w-full relative mt-[120px]">
             <div className="w-[328px] h-16 px-[16px] justify-between items-center inline-flex">
-                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]">Наши бонусы</div>
+                <div className="text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наши бонусы</div>
                 <div className="p-4 bg-rose-600 rounded-[20px] justify-start items-center gap-2.5 flex">
                     <div className="w-8 h-8 relative"><img src={heart}/></div>
                 </div>
             </div>
-            <p>Для наших сотрудников мы разработали ценностное предложение, основанное на современных HR-методиках.</p>
+            <div className=" text-white text-base font-medium font-['Raleway'] mb-[32px] px-4
+            leading-normal" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Для наших сотрудников мы разработали ценностное предложение, основанное на современных HR-методиках.
+            </div>
             <div className=" w-full  justify-start items-start inline-flex flex-col overflow-y-hidden">
                 <BonusDescriptionMobile config={superObj[index]} theme={theme}/>
                 <div className="flex flex-row  px-4  ">
@@ -117,11 +119,13 @@ const OurBonuses = ({theme}: ThemeType) => {
                                 return (
                                     <div>
                                         <div onClick={() => handleClick(c.id)}
-                                             className="w-[229px] h-[58px]  mx-1 my-2 bg-white rounded-[20px] border border-rose-600 justify-center items-center gap-2 inline-flex">
+                                             className={`${theme === 'light' ? "bg-white_theme text-rose-600" : "bg-black-theme text-white_theme border-none"}
+                                             w-[290px] h-[58px] mx-1 px-3   bg-white rounded-[20px] border border-rose-600 justify-center items-center gap-2 mb-2 inline-flex`}
+                                             style={{backgroundColor: theme === 'light' ? 'white' : '#212121'}} >
                                             <div
-                                                className="text-rose-600 text-base font-bold font-['Raleway'] leading-relaxed">{c.id}</div>
+                                                className="text-rose-600 text-base font-bold font-['Raleway'] leading-relaxed" style={{color: theme === 'light' ? '#FF1744' : 'white'}}>{c.id}</div>
                                             <div
-                                                className="text-rose-600 text-base font-medium font-['Raleway'] leading-normal">{c.title}
+                                                className="text-rose-600 text-base font-medium font-['Raleway'] leading-normal" style={{color: theme === 'light' ? '#FF1744' : 'white'}}>{c.title}
                                             </div>
                                         </div>
                                     </div>
@@ -140,11 +144,14 @@ const OurBonuses = ({theme}: ThemeType) => {
                                 return (
                                     <div>
                                         <div onClick={() => handleClick(c.id)}
-                                             className="w-[290px] h-[58px] mx-1 px-3   bg-white rounded-[20px] border border-rose-600 justify-center items-center gap-2 inline-flex">
+                                             className={`${theme === 'light' ? "bg-white_theme text-rose-600" : "bg-black-theme text-white_theme border-none"}
+                                             w-[290px] h-[58px] mx-1 px-3   bg-white rounded-[20px] border border-rose-600 justify-center items-center gap-2 inline-flex`}
+                                             style={{backgroundColor: theme === 'light' ? 'white' : '#212121'}}
+                                             >
                                             <div
-                                                className="text-rose-600 text-base font-bold font-['Raleway'] leading-relaxed">{c.id}</div>
+                                                className="text-rose-600 text-base font-bold font-['Raleway'] leading-relaxed" style={{color: theme === 'light' ? '#FF1744' : 'white'}}>{c.id}</div>
                                             <div
-                                                className="text-rose-600 text-base font-medium font-['Raleway'] leading-normal">{c.title}
+                                                className="text-rose-600 text-base font-medium font-['Raleway'] leading-normal" style={{color: theme === 'light' ? '#FF1744' : 'white'}}>{c.title}
                                             </div>
                                         </div>
                                     </div>

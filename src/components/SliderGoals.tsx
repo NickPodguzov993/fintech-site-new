@@ -5,7 +5,6 @@ import goals3 from '../../public/images/goals3.png'
 import star from '../../public/images/star.svg'
 import light from '../../public/images/lightning.svg'
 import rocket from '../../public/images/rocket.svg'
-import StarSvg from "./svg/StarSvg";
 import {ThemeType} from "./DesktopHeader";
 
 

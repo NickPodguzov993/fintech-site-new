@@ -75,7 +75,7 @@ const MainPage = ({theme}: ThemeType) => {
             <OurHrPolitics theme={theme}/>
             <OurBonuses theme={theme}/>
             <BonusesDesktop theme={theme}/>
-            <OurLocation/>
+            <OurLocation theme={theme}/>
             <ImagesSlider theme={theme}/>
             <Maps/>
 

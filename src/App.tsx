@@ -21,8 +21,8 @@ function App() {
             <DesktopHeader switchTheme={switchTheme} theme={theme}/>
                 <Routes>
                     <Route path='/' element={<MainPage theme={theme}/>}/>
-                    <Route path='/contacts' element={<Contacts/>}/>
-                    <Route path='/policies' element={<Policies/>}/>
+                    <Route path='/contacts' element={<Contacts theme={theme}/>}/>
+                    <Route path='/policies' element={<Policies theme={theme}/>}/>
                 </Routes>
                 <Footer theme={theme}/>
 
