@@ -105,7 +105,7 @@ const OurHrPolitics = ({theme}:ThemeType) => {
 
                 <div className='hidden sm:flex'>
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'} w-[300px] h-[290px]  sm:w-[400px] sm:h-[402px] flex-col 
-                    justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
+                    justify-start items-start inline-flex ml-2 overflow-x-auto duration-700 hover:bg-rose-600
          rounded-[40px] hover:text-white`}
                          data-aos="fade-down"
                          data-aos-delay="250"

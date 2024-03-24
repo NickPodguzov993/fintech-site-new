@@ -62,23 +62,23 @@ const Footer = ({theme}:ThemeType) => {
                     <div className="justify-start items-start flex">
                         <div className="w-[97px] px-4 rounded-[50px] justify-center items-center gap-2 flex">
                             <NavLink  to="/">
-                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'}  text-base font-bold font-['Raleway'] hover:text-rose-600 leading-relaxed pt-2`}
+                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'}  text-base font-bold font-['Raleway'] hover:text-rose-600 duration-300 leading-relaxed pt-2`}
                                 >Главная</div>
                             </NavLink>
                         </div>
                         <div className="w-[109px] px-4 rounded-[50px] justify-center items-center gap-2 flex">
                             <NavLink  to="/contacts">
-                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'}  text-base font-bold font-['Raleway'] hover:text-rose-600 leading-relaxed pt-2`}
+                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'}  text-base font-bold font-['Raleway'] hover:text-rose-600 duration-300 leading-relaxed pt-2`}
                                 >Контакты</div>
                             </NavLink>
                         </div>
                         <div className="w-[124px] px-4 rounded-[50px] justify-center items-center gap-2 flex">
                             <NavLink  to="/policies">
-                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'}  text-base font-bold font-['Raleway'] hover:text-rose-600 leading-relaxed pt-2`}>Документы</div>
+                                <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'}  text-base font-bold font-['Raleway'] hover:text-rose-600 duration-300 leading-relaxed pt-2`}>Документы</div>
                             </NavLink>
                         </div>
                     </div>
-                    <div className="w-[230px] pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center gap-4 flex">
+                    <div className="w-[230px] pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center gap-4 flex hover:bg-black_theme cursor-pointer duration-300">
                         <div className="text-white text-base font-bold font-['Raleway'] leading-relaxed">Связаться с нами</div>
                         <div className="w-10 h-10 p-2 bg-white rounded-[100px] justify-center items-center gap-2.5 flex">
                             <div className="w-6 h-6 relative origin-top-left " ><img className='hover:translate-x-2 duration-300' src={arrow}/></div>

@@ -10,8 +10,8 @@ const OurTeam = ({theme}:ThemeType) => {
                     <div className="self-stretch">
                         <span className="text-zinc-900 text-2xl font-medium font-['Raleway'] leading-9" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наши сотрудники - наша гордость и ключевая ценность компании. И мы </span>
                         <span className="text-zinc-900 text-2xl font-bold font-['Raleway'] leading-9" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>стремимся привлечь и удержать лучших! </span></div>
-                    <div className="h-16 pl-8 pr-1 bg-neutral-100 rounded-[100px] justify-center items-center gap-4 inline-flex">
-                        <div className="text-rose-600 text-xl font-bold font-['Raleway']">Вакансии Fintech</div>
+                    <div className="h-16 pl-8 pr-1 bg-neutral-100 rounded-[100px] justify-center items-center gap-4 inline-flex ">
+                        <div className="text-rose-600 text-xl font-bold font-['Raleway'] ">Вакансии Fintech</div>
                         <div className="w-14 h-14 justify-center items-center flex">
                             <div className="w-14 h-14 relative">
                                 <img src={hh}/>
@@ -34,7 +34,7 @@ const OurTeam = ({theme}:ThemeType) => {
                     <div className="self-stretch"><span className="text-zinc-900 text-[32px] font-medium font-['Raleway'] leading-[48px]" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наши сотрудники - наша гордость и ключевая ценность компании. И мы </span>
                         <span className="text-zinc-900 text-[32px] font-bold font-['Raleway'] leading-[48px]" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>стремимся привлечь и удержать лучших! </span>
                     </div>
-                    <div className="h-16 pl-8 pr-1 bg-neutral-100 rounded-[100px] justify-center items-center gap-4 inline-flex">
+                    <div className="h-16 pl-8 pr-1 bg-neutral-100 rounded-[100px] justify-center items-center gap-4 inline-flex hover:bg-black_theme duration-300 cursor-pointer">
                         <div className="text-rose-600 text-xl font-bold font-['Raleway']">Вакансии Fintech</div>
                         <div className="w-14 h-14 justify-center items-center flex">
                             <div className="w-14 h-14 relative">

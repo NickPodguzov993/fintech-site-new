@@ -8,7 +8,7 @@ type HrPoliticsComponentType = {
 
 const HrPoliticsComponent = (props:HrPoliticsComponentType) => {
     return (
-        <div className={`${props.theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'}  w-[400px] h-[402px] flex-col justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
+        <div className={`${props.theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'}  w-[400px] h-[402px] flex-col justify-start items-start inline-flex ml-2 overflow-x-auto duration-300 hover:bg-rose-600
          rounded-[40px] hover:text-white`} >
             <div
                 className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
