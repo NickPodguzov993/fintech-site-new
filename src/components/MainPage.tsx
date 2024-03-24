@@ -13,6 +13,7 @@ import DesktopOurMission from "./DesktopOurMission";
 import ImagesSlider from "./ImagesSlider";
 import {ThemeType} from "./DesktopHeader";
 import MainFigure from "./svg/MainFigure";
+import SendForm from "./Wrapper/SendForm";
 
 
 const MainPage = ({theme}: ThemeType) => {
@@ -77,10 +78,9 @@ const MainPage = ({theme}: ThemeType) => {
             <BonusesDesktop theme={theme}/>
             <OurLocation theme={theme}/>
             <ImagesSlider theme={theme}/>
-            <Maps/>
-
-
-
+            <div className='relative'>
+                <Maps/>
+            </div>
         </div>
 
     );

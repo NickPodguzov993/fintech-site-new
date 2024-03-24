@@ -1,10 +1,11 @@
 import {ThemeType} from "./DesktopHeader";
 import arrow from '../../public/images/arrowBack.svg'
 import copy from '../../public/images/copy.svg'
+import Maps from "./Maps";
 
 
 const Contacts = ({theme}:ThemeType) => {
-    const copyTextToClipboard = async (text) => {
+    const copyTextToClipboard = async (text:string) => {
         try {
             await navigator.clipboard.writeText(text);
             console.log('Текст успешно скопирован в буфер обмена!');
@@ -47,6 +48,7 @@ const Contacts = ({theme}:ThemeType) => {
                         <div className="text-white text-[32px] font-medium font-['Raleway'] leading-[48px]">fintech@gmail.com</div>
                     </div>
                 </div>
+                <Maps/>
             </div>
 
             <div>
