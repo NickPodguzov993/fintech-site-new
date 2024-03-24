@@ -1,7 +1,6 @@
-
-
 import {FormEvent, useState} from 'react'
 import emailjs from '@emailjs/browser';
+import send from '../../../public/images/sendLetter.svg'
 
 const SendForm = () => {
 
@@ -96,8 +95,8 @@ const SendForm = () => {
                 </div>
                 <div className="self-stretch justify-start items-start gap-4 inline-flex mt-[40px]">
 
-                    <button type="submit" className="w-[294px] h-[118px] p-8 bg-rose-600 rounded-[20px] flex-col justify-center items-center gap-1 inline-flex">
-                        <div className="w-6 h-6 relative" />
+                    <button type="submit" className="w-[294px] h-[118px] p-8 bg-rose-600 hover:bg-rose-700 duration-300 rounded-[20px] flex-col justify-center items-center gap-1 inline-flex">
+                        <div className="w-6 h-6 relative" ><img src={send}/></div>
                         <div className="text-white text-base font-bold font-['Raleway'] leading-relaxed">  Отправить</div>
                     </button>
                 </div>
