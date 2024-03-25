@@ -49,7 +49,7 @@ const SendForm = ({theme}:ThemeType) => {
 
     return (
 
-        <div>
+        <div className='animate-fade-down animate-once animate-duration-1000 animate-delay-300 animate-ease-linear animate-normal'>
             <form encType="multipart/form-data" onSubmit={handleSubmit}
                   className={`${theme === 'light' ? "bg-white" : "bg-[black]"} hidden sm:block  flex-col  w-[668px] h-[716px] p-8  rounded-[40px] shadow  justify-start items-center gap-8 inline-flex`}>
                 <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'} self-stretch  text-5xl font-medium font-['Raleway']`}>Мы ждём вас!</div>

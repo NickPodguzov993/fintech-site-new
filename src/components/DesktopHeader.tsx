@@ -45,7 +45,7 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
                 <div className='absolute left-[-310px] top-[15px]'>
                     {openDesktopMessage && <div>
                         <SendForm getSendMessage={getSendMessage} theme={theme}/>
-                        <div className='absolute left-[600px] top-[10px]' onClick={getSendDesktopMessage}><CloseMenuSvg theme={theme}/></div>
+                        <div className='absolute left-[600px] top-[10px] cursor-pointer' onClick={getSendDesktopMessage}><CloseMenuSvg theme={theme}/></div>
                     </div> }
 
                 </div>

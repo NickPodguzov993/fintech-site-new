@@ -97,7 +97,7 @@ const Footer = ({theme}:ThemeType) => {
                     </div>
                     {openMessage &&<div className='absolute left-[350px] top-[-240px] z-40'>
                         <SendForm getSendMessage={getSendMessage} theme={theme}/>
-                        <div className='absolute left-[600px] top-[10px]' onClick={getSendMessage}><CloseMenuSvg theme={theme}/></div>
+                        <div className='absolute left-[600px] top-[10px] cursor-pointer' onClick={getSendMessage}><CloseMenuSvg theme={theme}/></div>
                     </div> }
                 </div>
                 <div className='absolute top-[225px] left-[100px]'><BigLogo theme={theme} width={'1200'} height={'137'}/></div>
