@@ -1,7 +1,8 @@
 import SendForm from "./Wrapper/SendForm";
+import {ThemeType} from "./DesktopHeader";
 
 
-const Maps = () => {
+const Maps = ({theme}:ThemeType) => {
 
     return (
         <div className='relative '
@@ -13,7 +14,7 @@ const Maps = () => {
             </div>
 
             <div className='absolute z-10 top-[30px] left-[700px]'>
-                <SendForm/>
+                <SendForm theme={theme}/>
             </div>
         </div>
 

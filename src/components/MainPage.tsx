@@ -13,9 +13,12 @@ import DesktopOurMission from "./DesktopOurMission";
 import ImagesSlider from "./ImagesSlider";
 import {ThemeType} from "./DesktopHeader";
 import MainFigure from "./svg/MainFigure";
+import SendFormForPage from "./SendFormForPage";
 
 
 const MainPage = ({theme}: ThemeType) => {
+
+
     return (
         <div
             className='overflow-y-hidden w-full sm:pt-[150.5px] pt-[120px] flex flex-col justify-start items-center sm:gap-40 sm:gap-[120px]
@@ -78,8 +81,9 @@ const MainPage = ({theme}: ThemeType) => {
             <OurLocation theme={theme}/>
             <ImagesSlider theme={theme}/>
             <div className='relative'>
-                <Maps/>
+                <Maps theme={theme}/>
             </div>
+         <SendFormForPage theme={theme}/>
         </div>
 
     );

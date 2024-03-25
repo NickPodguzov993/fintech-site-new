@@ -154,4 +154,26 @@ textarea {
     margin: 10px 0px;
 }
 
+/*
+.input {
+    @apply py-4 sm:py-8 px-8 bg-grey rounded-[30px] sm:rounded-[40px] border-none outline-none resize-none
+}
+
+.check_box {
+    @apply accent-grey self-start sm:self-center sm:mb-[25px] w-6 h-6
+}
+
+.check_box_text {
+    @apply text-primary font-normal sm:text-base font-['Arial'] leading-snug
+}
+
+.error_check_box_text {
+    @apply text-rose-600 font-normal sm:text-base font-['Arial'] leading-snug
+}
+
+.error_check_box {
+    @apply accent-grey self-start sm:self-center sm:mb-[25px] w-6 h-6
+}
+*/
+
 

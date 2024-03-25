@@ -12,6 +12,9 @@ export type ThemeType = {
     switchTheme?: () => void
     width?: string
     height?: string
+    getSendMessage?: ()=>void
+    openMessage?: boolean
+
 }
 
 
@@ -38,9 +41,9 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
                 <NavLink  to="/">
                     <Logo theme={theme}/>
                 </NavLink>
-                <div onClick={getSendMessage} className="fixed sm:hidden w-[264px]  h-16 p-2 bg-white rounded-[30px] top-[528px] right-[8px] z-90 shadow justify-start items-start gap-1 inline-flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
-                    <div className="w-[196px] relative h-12 px-8 bg-rose-600 rounded-[100px] justify-start items-center gap-1 inline-flex">
-                        <div className="text-white text-sm font-bold font-['Raleway'] leading-snug" >Отправить резюме</div>
+                <div  className="fixed sm:hidden w-[264px]  h-16 p-2 bg-white rounded-[30px] top-[528px] right-[8px] z-90 shadow justify-start items-start gap-1 inline-flex" style={{backgroundColor: theme === 'light' ? '#F5F5F5' : '#212121'}}>
+                    <div onClick={getSendMessage} className="w-[196px]  relative h-12 px-8 bg-rose-600 rounded-[100px] justify-start items-center gap-1 inline-flex">
+                        <div   className="text-white text-sm font-bold font-['Raleway'] leading-snug" >Отправить резюме</div>
                     </div>
                     <div className="w-12 h-12 p-2.5 rounded-[100px] justify-center items-center gap-2.5 flex">
                         <div className="w-4 h-4 py-[2.40px] justify-center items-center flex" onClick={openMenu}><MenuSvg theme={theme}/></div>
@@ -68,7 +71,7 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
                             <input onChange={switchTheme} type="checkbox" />
                                 <span className="slider round"></span>
                         </label>
-                        <div className='absolute left-[310px]'>
+                        <div className='absolute sm:hidden left-[310px]'>
                             <MoonSvg theme={theme}/>
                         </div>
                         <div className=" hidden sm:flex  sm:w-[243px] h-10 self-stretch pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center

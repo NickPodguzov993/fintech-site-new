@@ -105,11 +105,9 @@ const OurHrPolitics = ({theme}:ThemeType) => {
 
                 <div className='hidden sm:flex'>
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'} w-[300px] h-[290px]  sm:w-[400px] sm:h-[402px] flex-col 
-                    justify-start items-start inline-flex ml-2 overflow-x-auto duration-700 hover:bg-rose-600
+                    justify-start items-start inline-flex ml-2 overflow-x-auto duration-500 hover:bg-rose-600
          rounded-[40px] hover:text-white`}
-                         data-aos="fade-down"
-                         data-aos-delay="250"
-                         data-aos-duration="1000">
+                        >
                         <div
                             className="self-stretch h-[164px] p-4 sm:p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
                             <div className="px-4 py-2 rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
@@ -136,11 +134,9 @@ const OurHrPolitics = ({theme}:ThemeType) => {
 
 
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'} w-[300px] h-[290px]  sm:w-[400px] sm:h-[402px] flex-col justify-start 
-                    items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
+                    items-start inline-flex ml-2 overflow-x-auto duration-500 hover:bg-rose-600
          rounded-[40px] hover:text-white`}
-                         data-aos="fade-down"
-                         data-aos-delay="350"
-                         data-aos-duration="1000">
+                        >
                         <div
                             className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]"
                             >
@@ -165,11 +161,9 @@ const OurHrPolitics = ({theme}:ThemeType) => {
                     </div>
 
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'} w-[300px] h-[290px]  sm:w-[400px] sm:h-[402px] 
-                    flex-col justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
+                    flex-col justify-start items-start inline-flex ml-2 duration-500 overflow-x-auto hover:bg-rose-600
          rounded-[40px] hover:text-white`}
-                         data-aos="fade-down"
-                         data-aos-delay="450"
-                         data-aos-duration="1000">
+                        >
                         <div
                             className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
                             <div className="px-4 py-2 rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
@@ -194,11 +188,9 @@ const OurHrPolitics = ({theme}:ThemeType) => {
                         </div>
                     </div>
                     <div className={`${theme === 'light' ? 'bg-[#F5F5F5]' : 'bg-[#212121]'} w-[300px] h-[290px]  sm:w-[400px] sm:h-[402px] 
-                    flex-col justify-start items-start inline-flex ml-2 overflow-x-auto hover:bg-rose-600
+                    flex-col justify-start items-start inline-flex ml-2 overflow-x-auto duration-500 hover:bg-rose-600
          rounded-[40px] hover:text-white`}
-                         data-aos="fade-down"
-                         data-aos-delay="550"
-                         data-aos-duration="1000">
+                         >
                         <div
                             className="self-stretch h-[164px] p-8  flex-col justify-start items-start flex hover:rounded-t-[20px]">
                             <div className="px-4 py-2 rounded-[20px] justify-center items-center gap-2.5 inline-flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>

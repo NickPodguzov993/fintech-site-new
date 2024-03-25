@@ -1,12 +1,12 @@
-import CloseMenuSvg from "../svg/CloseMenuSvg";
-import send from '../../../public/images/sendLetter.svg'
+
+import send from '../../public/images/sendLetter.svg'
 import {FormEvent, useState} from "react";
 import emailjs from '@emailjs/browser';
-import {ThemeType} from "../DesktopHeader";
+import {ThemeType} from "../../src/components/DesktopHeader"
 
 
 
-const MobileSendForm = ({theme, getSendMessage}: ThemeType) => {
+const SendFormForPage = ({theme}: ThemeType) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -54,15 +54,13 @@ const MobileSendForm = ({theme, getSendMessage}: ThemeType) => {
               data-aos="fade-down"
               data-aos-delay="250"
               data-aos-duration="1000"
-              className={`${theme === 'light' ? "bg-white" : "bg-[black]"} w-[360px] h-[862px] px-4   rounded-tl-[20px] rounded-tr-[20px] flex-col justify-start items-center gap-8 inline-flex`}>
+              className={`${theme === 'light' ? "bg-white" : "bg-[black]"} sm:hidden w-[360px] h-[862px] px-4   rounded-tl-[20px] rounded-tr-[20px] flex-col justify-start items-center gap-8 inline-flex`}>
             <div className="w-12 h-12 p-2.5 rounded-[100px] justify-center items-center gap-2.5 inline-flex">
                 <div className="w-4 h-4 p-[2.26px] justify-center items-center flex">
-                    <div className=" absolute left-[300px] top-[20px] " onClick={getSendMessage}>
-                        <CloseMenuSvg theme={theme}/>
-                    </div>
+
                 </div>
             </div>
-            <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'} text-center  text-2xl font-medium font-['Raleway'] leading-9`}>Напишите нам
+            <div className={`${theme === 'light' ? 'text-[#1B1B1B]' : 'text-[#fff]'} text-center  text-2xl font-medium font-['Raleway'] leading-9`}>Мы ждем вас!
             </div>
             <div className="self-stretch h-[530px] flex-col justify-start items-center gap-4 flex">
                 <input
@@ -122,10 +120,10 @@ const MobileSendForm = ({theme, getSendMessage}: ThemeType) => {
                         </div>
                     </div>
                     <button type='submit'
-                        className="self-stretch h-[111px] p-8 bg-rose-600 rounded-[20px] flex-col justify-center items-center gap-1 flex">
+                            className="self-stretch h-[111px] p-8 bg-rose-600 rounded-[20px] flex-col justify-center items-center gap-1 flex">
                         <div className="w-6 h-6 relative"><img src={send}/></div>
                         <div
-                                className="text-white text-base font-bold font-['Raleway'] leading-relaxed ">
+                            className="text-white text-base font-bold font-['Raleway'] leading-relaxed ">
                             Отправить
                         </div>
                     </button>
@@ -135,4 +133,4 @@ const MobileSendForm = ({theme, getSendMessage}: ThemeType) => {
     );
 };
 
-export default MobileSendForm;
+export default SendFormForPage;

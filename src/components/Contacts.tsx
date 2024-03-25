@@ -2,9 +2,10 @@ import {ThemeType} from "./DesktopHeader";
 import arrow from '../../public/images/arrowBack.svg'
 import copy from '../../public/images/copy.svg'
 import Maps from "./Maps";
+import SendFormForPage from "./SendFormForPage";
 
 
-const Contacts = ({theme}:ThemeType) => {
+const Contacts = ({theme,openMessage}:ThemeType) => {
     const copyTextToClipboard = async (text:string) => {
         try {
             await navigator.clipboard.writeText(text);
@@ -30,7 +31,7 @@ const Contacts = ({theme}:ThemeType) => {
                                     <div className="text-rose-600 text-[32px] font-medium font-['Raleway'] leading-[48px]">fintech@gmail.com</div>
                                 </div>
                                 <div className="w-24 self-stretch px-8 py-4 bg-white rounded-[30px] justify-center items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                    <div className="w-8 h-8 relative"  onClick={() => copyTextToClipboard('fintech@gmail.com')}><img src={copy}/></div>
+                                    <div className="w-8 h-8 relative"  onClick={() => copyTextToClipboard('fintech@gmail.com')}><img className='cursor-pointer' src={copy}/></div>
                                 </div>
                             </div>
                         </div>
@@ -48,12 +49,12 @@ const Contacts = ({theme}:ThemeType) => {
                         <div className="text-white text-[32px] font-medium font-['Raleway'] leading-[48px]">fintech@gmail.com</div>
                     </div>
                 </div>
-                <Maps/>
+                <Maps theme={theme}/>
             </div>
 
             <div>
                 <div className="sm:hidden mt-[120px] mb-[120px] w-[360px] h-[833px] px-4 flex-col justify-start items-start gap-8 inline-flex">
-                    <div className="flex-col justify-start items-start gap-2.5 flex">
+                    <div className="flex-col justify-start items-start gap-2.5 flex mt-[32px]">
                         <div className="w-[328px] text-zinc-900 text-5xl font-medium font-['Raleway']" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>Наши контакты</div>
                         <div className="self-stretch text-zinc-900 text-base font-medium font-['Raleway'] leading-normal" style={{color: theme === 'light' ? '#1B1B1B' : 'white'}}>We appreciate your interest in reaching out to us. Whether you have a question, feedback, or want to explore potential collaborations, we're here to assist you. Our team is committed to providing exceptional customer service and building long-lasting relationships with our valued clients.</div>
                     </div>
@@ -66,7 +67,7 @@ const Contacts = ({theme}:ThemeType) => {
                                         <div className="text-rose-600 text-2xl font-medium font-['Raleway'] leading-9">fintech@gmail.com</div>
                                     </div>
                                     <div className="w-12 self-stretch p-4 bg-white rounded-[15px] justify-center items-center gap-2.5 flex" style={{backgroundColor: theme === 'light' ? 'white' : 'black'}}>
-                                        <div className="w-4 h-4 relative" onClick={() => copyTextToClipboard('fintech@gmail.com')}><img src={copy}/></div>
+                                        <div className="w-4 h-4 relative" onClick={() => copyTextToClipboard('fintech@gmail.com')}><img  src={copy}/></div>
                                     </div>
                                 </div>
                             </div>
@@ -83,8 +84,14 @@ const Contacts = ({theme}:ThemeType) => {
                             <div className="text-white text-2xl font-medium font-['Raleway'] leading-9">fintech@gmail.com</div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
+            <div className='sm:hidden'>
+                <Maps theme={theme}/>
+            </div>
+            <SendFormForPage theme={theme} openMessage={openMessage}/>
         </div>
 
     );
