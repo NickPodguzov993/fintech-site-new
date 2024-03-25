@@ -5,6 +5,8 @@ import {NavLink} from "react-router-dom";
 import Logo from "./svg/Logo";
 import {useState} from "react";
 import MobileSendForm from "./Wrapper/MobileSendForm";
+import SendForm from "./Wrapper/SendForm";
+import CloseMenuSvg from "./svg/CloseMenuSvg";
 
 
 const Footer = ({theme}:ThemeType) => {
@@ -87,12 +89,16 @@ const Footer = ({theme}:ThemeType) => {
                             </NavLink>
                         </div>
                     </div>
-                    <div className="w-[230px] pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center gap-4 flex hover:bg-black_theme cursor-pointer duration-300">
-                        <div onClick={getSendMessage} className="text-white text-base font-bold font-['Raleway'] leading-relaxed">Связаться с нами</div>
+                    <div onClick={getSendMessage} className="w-[230px] pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center gap-4 flex hover:bg-black_theme cursor-pointer duration-300">
+                        <div  className="text-white text-base font-bold font-['Raleway'] leading-relaxed">Связаться с нами</div>
                         <div className="w-10 h-10 p-2 bg-white rounded-[100px] justify-center items-center gap-2.5 flex">
                             <div className="w-6 h-6 relative origin-top-left " ><img className='hover:translate-x-2 duration-300' src={arrow}/></div>
                         </div>
                     </div>
+                    {openMessage &&<div className='absolute left-[350px] top-[-240px] z-40'>
+                        <SendForm getSendMessage={getSendMessage} theme={theme}/>
+                        <div className='absolute left-[600px] top-[10px]' onClick={getSendMessage}><CloseMenuSvg theme={theme}/></div>
+                    </div> }
                 </div>
                 <div className='absolute top-[225px] left-[100px]'><BigLogo theme={theme} width={'1200'} height={'137'}/></div>
             </div>
