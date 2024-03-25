@@ -100,7 +100,7 @@ const SendForm = ({theme}:ThemeType) => {
                 <div className="w-[608px] justify-start items-start gap-2 inline-flex absolute">
                     <div className="w-6 h-6 relative" />
 
-                  {/*  <div className="grow shrink basis-0"><span className="text-black text-opacity-50 text-sm font-normal font-['Raleway'] leading-[21px]">Я ознакомлен и согласен с условиями </span><span className="text-rose-600 text-sm font-bold font-['Raleway'] leading-snug">Политики конфиденциальности</span></div>*/}
+                    <div className="grow shrink basis-0"><span className="text-black text-opacity-50 text-sm font-normal font-['Raleway'] leading-[21px]">Я ознакомлен и согласен с условиями </span><span className="text-rose-600 text-sm font-bold font-['Raleway'] leading-snug">Политики конфиденциальности</span></div>
                 </div>
                 <div className="block">
                     <input

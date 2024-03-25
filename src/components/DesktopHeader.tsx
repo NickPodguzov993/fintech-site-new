@@ -43,7 +43,7 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
             <div className='absolute z-40'>
                 {openMessage && <MobileSendForm getSendMessage={getSendMessage} theme={theme}/>}
                 <div className='absolute left-[-310px] top-[15px]'>
-                    {openDesktopMessage && <div>
+                    {openDesktopMessage && <div className='animate-fade-down animate-once animate-duration-1000 animate-delay-300 animate-ease-linear animate-normal'>
                         <SendForm getSendMessage={getSendMessage} theme={theme}/>
                         <div className='absolute left-[600px] top-[10px] cursor-pointer' onClick={getSendDesktopMessage}><CloseMenuSvg theme={theme}/></div>
                     </div> }
@@ -91,7 +91,7 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
                         <div onClick={getSendDesktopMessage} className=" hidden sm:flex  sm:w-[243px] h-10 self-stretch pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center
                          hover:bg-black_theme duration-300 gap-4 flex cursor-pointer">
                             <div className=" text-white text-base font-bold font-['Raleway'] leading-relaxed" >Отправить резюме</div>
-                            <div className="w-9 h-9 p-2 bg-white rounded-[100px] justify-center items-center gap-3 flex ">
+                            <div className="w-9 h-9 p-2 bg-white rounded-[100px] ml-[4px] justify-center items-center gap-3 flex ">
                                 <img className='hover:translate-x-2 duration-300' src={arrowRight}/>
                             </div>
                         </div>
