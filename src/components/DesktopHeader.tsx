@@ -6,6 +6,8 @@ import {useState} from "react";
 import BurgerMenu from "./BurgerMenu";
 import MoonSvg from "./svg/MoonSvg";
 import MobileSendForm from "./Wrapper/MobileSendForm";
+import SendForm from "./Wrapper/SendForm";
+import CloseMenuSvg from "./svg/CloseMenuSvg";
 
 export type ThemeType = {
     theme: string
@@ -22,6 +24,7 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
 
     const [open,setOpen] = useState(false)
     const [openMessage,setOpenMessage] = useState(false)
+    const [openDesktopMessage,setOpenDesktopMessage] = useState(false)
 
     const openMenu = () => {
         setOpen(!open)
@@ -30,11 +33,22 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
         setOpenMessage(!openMessage)
     }
 
+    const getSendDesktopMessage = () => {
+        setOpenDesktopMessage(!openDesktopMessage)
+    }
+
     return (
         <>
             {open && <BurgerMenu openMenu={openMenu} theme={theme}/>}
             <div className='absolute z-40'>
                 {openMessage && <MobileSendForm getSendMessage={getSendMessage} theme={theme}/>}
+                <div className='absolute left-[-310px] top-[15px]'>
+                    {openDesktopMessage && <div>
+                        <SendForm getSendMessage={getSendMessage} theme={theme}/>
+                        <div className='absolute left-[600px] top-[10px]' onClick={getSendDesktopMessage}><CloseMenuSvg theme={theme}/></div>
+                    </div> }
+
+                </div>
             </div>
 
             <div  className={`${theme === 'light' ? "bg-white" : "bg-[#212121]"} w-[360px]  sm:w-[1440px] inline-flex flex h-20 p-4  bg-opacity-90  sm:justify-between items-center fixed z-20 `}>
@@ -74,7 +88,7 @@ const DesktopHeader = ({theme,switchTheme}:ThemeType) => {
                         <div className='absolute sm:hidden left-[310px]'>
                             <MoonSvg theme={theme}/>
                         </div>
-                        <div className=" hidden sm:flex  sm:w-[243px] h-10 self-stretch pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center
+                        <div onClick={getSendDesktopMessage} className=" hidden sm:flex  sm:w-[243px] h-10 self-stretch pl-8 pr-1 bg-rose-600 rounded-[100px] justify-start items-center
                          hover:bg-black_theme duration-300 gap-4 flex cursor-pointer">
                             <div className=" text-white text-base font-bold font-['Raleway'] leading-relaxed" >Отправить резюме</div>
                             <div className="w-9 h-9 p-2 bg-white rounded-[100px] justify-center items-center gap-3 flex ">
